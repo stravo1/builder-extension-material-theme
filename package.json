@@ -1,0 +1,26 @@
+{
+  "name": "@builder/brand-palette",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "package": "builder-extension package"
+  },
+  "dependencies": {
+    "@material/material-color-utilities": "^0.2.7",
+    "@vueuse/core": "^10.11.1",
+    "frappe-ui": "1.0.0-beta.21",
+    "vue": "^3.5.0",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.124",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "frappe-builder-extension-sdk": "github:stravo1/frappe-builder-extension-sdk#dev",
+    "tailwindcss": "^3.4.19",
+    "unplugin-icons": "^23.0.1",
+    "vite": "^5.4.0"
+  }
+}

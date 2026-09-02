@@ -1,0 +1,10 @@
+{
+  "v": 1,
+  "name": "builder/material-theme",
+  "label": "Material theme",
+  "description": "Generate Material 3 tokens.",
+  "version": "1.0.0",
+  "entry": "main.js",
+  "icon": "icon.svg",
+  "capabilities": ["token.write", "ui.popover"]
+}
