@@ -27,5 +27,6 @@ npm run package
 ```
 
 The package command validates the repository and writes
-`release/builder-material-theme-1.0.0.builderext`. Push `v1.0.0`, or create a GitHub
-release with that tag, to let the release workflow publish that package.
+`release/builder-material-theme-1.0.0.builderext`. For the next release, increase the
+version in `manifest.json` and `package.json`, then push `v<new-version>` or
+create a GitHub release with that tag.
