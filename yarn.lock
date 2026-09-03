@@ -1568,8 +1568,8 @@ fill-range@^7.1.1:
     to-regex-range "^5.0.1"
 
 "frappe-builder-extension-sdk@github:stravo1/frappe-builder-extension-sdk#dev":
-  version "1.2.0"
-  resolved "https://codeload.github.com/stravo1/frappe-builder-extension-sdk/tar.gz/d5f63a28ad93fb02818a032dca09633e2fdb1162"
+  version "1.2.1"
+  resolved "https://codeload.github.com/stravo1/frappe-builder-extension-sdk/tar.gz/24dec2b6d8e2d358ec98b9cb89163141b0070b73"
 
 frappe-ui@1.0.0-beta.21:
   version "1.0.0-beta.21"
