@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+      - "[0-9]*.[0-9]*.[0-9]*"
   release:
     types:
       - published
@@ -31,7 +32,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Validate and package
-        run: npm run package -- --tag "$RELEASE_TAG"
+        # The SDK packager requires a "v"-prefixed tag; the git tag and release stay bare.
+        run: npm run package -- --tag "v${RELEASE_TAG#v}"
       - name: Create GitHub release
         if: github.event_name == 'push'
         env:
