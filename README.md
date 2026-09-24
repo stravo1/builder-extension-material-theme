@@ -27,6 +27,6 @@ npm run package
 ```
 
 The package command validates the repository and writes
-`release/builder-material-theme-1.0.0.builderext`. For the next release, increase the
-version in `manifest.json` and `package.json`, then push `v<new-version>` or
-create a GitHub release with that tag.
+`release/stravo1-material-theme-<version>.builderext`. For the next release, increase the
+version in `manifest.json` and `package.json`, then push the new version as a tag, such as
+`1.0.7`. Leave out the `v`: Builder Hub reads only a bare version tag.
