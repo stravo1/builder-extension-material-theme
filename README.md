@@ -5,10 +5,10 @@ Generate a Material 3 color system and write it to Builder as design tokens.
 Open the extension from its details page or use the toolbar button. Choose a source color,
 review the generated roles, and add the palette to the current Builder site.
 
-## Capabilities
+## Permissions
 
-- `token.write` creates and updates the generated design tokens.
-- `ui.popover` lets the toolbar button open the palette.
+- `data.access` creates and updates the generated `Builder Token` records, in the
+  "Material theme" group. Reload the editor to see new tokens.
 
 ## Develop
 

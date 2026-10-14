@@ -5,7 +5,6 @@ export const SEED_PRESETS = ["#6750a4", "#006e1c", "#006a6a", "#005ac1", "#9c423
 export const TONES = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
 
 const label = (name) => name.replace(/([A-Z])/g, " $1").replace(/^./, (letter) => letter.toUpperCase());
-const tokenKey = (name) => `material-${name.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`)}`;
 
 /** Material 3's semantic roles become Builder tokens with paired light/dark values. */
 export const themeFor = (seed) => {
@@ -30,7 +29,9 @@ export const themeFor = (seed) => {
 	};
 };
 
+export const TOKEN_GROUP = "Material theme";
+
 export const tokensFor = ({ roles }) =>
-	roles.map(({ name, label: token_name, light: value, dark: dark_value }) => ({
-		key: tokenKey(name), token_name, type: "Color", value, dark_value, group: "Material theme",
+	roles.map(({ label: token_name, light: value, dark: dark_value }) => ({
+		token_name, type: "Color", value, dark_value, group: TOKEN_GROUP,
 	}));

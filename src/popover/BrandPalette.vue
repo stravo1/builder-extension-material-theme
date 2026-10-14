@@ -52,6 +52,7 @@ import { computed, ref, watch } from "vue";
 import BuilderColorPicker from "../components/BuilderColorPicker.vue";
 import { isHexColor } from "../colors.js";
 import { DEFAULT_SEED, themeFor, tokensFor } from "../palette.js";
+import { saveTokens } from "../tokens.js";
 
 const seed = ref(DEFAULT_SEED);
 const showDark = ref(false);
@@ -76,8 +77,10 @@ watch(seed, (value) => {
 const write = async () => {
 	writing.value = true;
 	try {
-		await builder.tokens.set(tokensFor(theme.value));
-		await builder.ui.toast(`Material theme written from ${applied.value}`, { type: "success" });
+		await saveTokens(tokensFor(theme.value));
+		await builder.ui.toast(`Material theme written from ${applied.value}. Reload the editor to see the new tokens.`, {
+			type: "success",
+		});
 	} finally {
 		writing.value = false;
 	}
